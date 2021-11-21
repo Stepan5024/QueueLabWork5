@@ -91,9 +91,9 @@ int main()
         case 4: // Удаление из очереди из начала списка
             if (!is_empty(list)) {
                 Priority d = pop(&list);
-                printf("Удален элемент с приоритетом %d :\n", d);
+                printf("Удален элемент с приоритетом %d\n", d);
             }
-            
+            print(list);
             break;
         case 5: // Удаление из очереди по заданному приоритету
             printf("Значение > "); scanf_s("%d", &value);
@@ -104,7 +104,7 @@ int main()
         case 6: // Очистка очереди
             while (!is_empty(list)) {
                 Priority d = pop(&list);
-                printf("pop %d :\n", d);
+                printf("Удален элемент с приоритетом %d\n", d);
             }
             printf("Очередь пуста: %s\n", is_empty(list) ? " Да" : " Нет");
             break;
